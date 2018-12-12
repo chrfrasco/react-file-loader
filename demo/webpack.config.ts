@@ -11,7 +11,7 @@ const config: webpack.Configuration = {
     rules: [
       {
         test: /\.react$/,
-        use: path.resolve(__dirname, '../react-file.js')
+        use: path.resolve(__dirname, '../react-file-loader.js')
       }
     ]
   },
