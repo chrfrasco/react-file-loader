@@ -1,0 +1,27 @@
+<script>
+import React from 'react'
+
+export class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {count: 0}
+    this.onClick = this.onClick.bind(this)
+  }
+  render() {
+    return React.createElement('button', {className: 'btn', onClick: this.onClick}, `+ ${this.state.count}`)
+  }
+  onClick() {
+    this.setState({ count: this.state.count + 1 })
+  }
+}
+</script>
+
+<style>
+.btn {
+  border: none;
+  border-radius: 0;
+  background-color: blue;
+  font-size: 2rem;
+  color: white;
+}
+</style>
