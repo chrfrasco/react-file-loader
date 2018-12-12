@@ -10,8 +10,16 @@ const config: webpack.Configuration = {
   module: {
     rules: [
       {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader']
+      },
+      {
         test: /\.react$/,
-        use: path.resolve(__dirname, '../react-file-loader.js')
+        use: [
+          'babel-loader',
+          path.resolve(__dirname, '../react-file-loader.js'),
+        ]
       }
     ]
   },

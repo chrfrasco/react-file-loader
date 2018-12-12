@@ -2,16 +2,12 @@
 import React from 'react'
 
 export class App extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {count: 0}
-    this.onClick = this.onClick.bind(this)
-  }
+  state = {count: 0}
   render() {
-    return React.createElement('button', {className: 'btn', onClick: this.onClick}, `+ ${this.state.count}`)
+    return <button className="btn" onClick={this.onClick}>+ {this.state.count}</button>
   }
-  onClick() {
-    this.setState({ count: this.state.count + 1 })
+  onClick = () => {
+    this.setState({count: this.state.count + 1})
   }
 }
 </script>
